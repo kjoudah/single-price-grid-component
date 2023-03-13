@@ -1,0 +1,154 @@
+@use "reset.scss";
+@use "colors.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--accent-grey);
+  font-size: 100%;
+  min-height: 100vh;
+  display: grid;
+
+  @media (min-width: 800px) {
+    place-content: center;
+  }
+}
+
+.grid-span-col-2 {
+  grid-column: auto;
+
+  @media (min-width: 800px) {
+    grid-column: span 2;
+  }
+}
+
+.single-price-container {
+  --content-padding: 1.5rem;
+  display: grid;
+  min-width: 23.4375em;
+  margin: 2rem;
+  grid-template-columns: 1fr;
+  background-color: white;
+  border-radius: 0.5rem;
+  max-width: 52em;
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  @media (min-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+    --content-padding: 3rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.single-price-container > * {
+  padding: var(--content-padding);
+}
+
+.our-community-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.our-community-title {
+  color: var(--primary-cyan);
+}
+
+.our-community-subtitle {
+  color: var(--primary-yellow);
+  font-size: 1rem;
+
+  @media (min-width: 800px) {
+    font-size: 1.2rem;
+  }
+}
+
+.our-community-description {
+  color: var(--accent-blue);
+  @media (min-width: 800px) {
+    font-size: 1.2rem;
+  }
+}
+
+.subscription-container {
+  background-color: var(--primary-cyan);
+  color: white;
+}
+
+.subscription-price-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.subscription-price {
+  font-size: 2rem;
+  font-weight: 700;
+
+  @media (min-width: 800px) {
+    font-size: 2.3rem;
+  }
+}
+
+.subscription-price-period {
+  color: var(--accent-grey);
+  @media (min-width: 800px) {
+    font-size: 1.2rem;
+  }
+}
+
+.subscription-price-description {
+  color: var(--accent-grey);
+  @media (min-width: 800px) {
+    font-size: 1.2rem;
+  }
+}
+
+.sign-up-button {
+  border: transparent;
+  border-radius: 0.25rem;
+  background-color: var(--primary-yellow);
+  width: 100%;
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: 700;
+  margin-top: 1.5rem;
+
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    filter: brightness(105%);
+  }
+
+  @media (min-width: 800px) {
+    margin-top: 3rem;
+  }
+}
+
+.why-us-container {
+  background: var(--primary-light-cyan);
+  color: white;
+}
+
+.why-us-reasons {
+  list-style: none;
+  margin: 1rem 0 0 0;
+  padding: 0;
+}
+
+.why-us-reasons li {
+  color: var(--accent-grey);
+
+  @media (min-width: 800px) {
+    font-size: 1.2rem;
+  }
+}
